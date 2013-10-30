@@ -25,6 +25,9 @@ function fight(){
   
     for (var i=0; i < 10; i++){
         //console.log(i);
+        
+        //random formula -- Math.floor(Math.random() * (max - min) + min);
+        
         var minDamage1 = p1Damage * .5;
         var minDamage2 = p2Damage * .5;
         var f1 = Math.floor(Math.random()*(p1Damage-minDamage1)+minDamage1);
