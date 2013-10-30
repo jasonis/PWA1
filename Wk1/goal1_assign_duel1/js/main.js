@@ -50,7 +50,7 @@ function fight(){
             alert(p1Name+":"+p1Health+" *ROUND* "+round+" OVER "+p2Name+":"+p2Health);
         }else{
             alert(results);
-            break;
+            break;//this gets us out of the function when we get to 10 rounds
         }
   
   };  
