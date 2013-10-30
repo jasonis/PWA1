@@ -19,7 +19,7 @@ var p2Damage = 20;
 var round = 0;
 
 function fight(){
-    console.log('in the fight function');
+    console.log('in the fight function');//this verifies that you are inside of the function
   
     alert(p1Name+":"+p1Health+" *START* "+p2Name+":"+p2Health);
   
