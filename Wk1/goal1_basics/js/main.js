@@ -251,7 +251,7 @@ console.log('------ conditionals ----------');
         a true or false boolean
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
-
+    
 
 
 /*
@@ -347,7 +347,13 @@ console.log('------ conditionals ----------');
  GOAL
     1. learn if - else
  ********************************************/
-
+    var weather = "cloudy";
+    if (weather === "sunny"){
+        bobsMood = "happy";
+    }else{
+        bobsMood = "sad";
+    }
+    console.log("Bob's mood is ", bobsMood);
 
 
 
@@ -366,7 +372,24 @@ console.log('------ conditionals ----------');
         - else bobsMood = "sad"
     3.  console.log the results after each conditional
  ********************************************/
-
+    /*var waves = 8;
+    var weather = "sunny";
+    if (weather === "sunny" && waves === 10){
+        bobsMood = "pumped";
+    }else if(weather ==="sunny" && (waves <=9) && (waves >= 5)){
+        bobsMood = "mellow";
+    }else if(weather === "sunny" && waves < 5){
+        bobsMood = "bummed";
+    }else if(weather === "overcast" && (waves <= 10) && (waves >= 7)){
+        bobsMood = "jackedUp";
+    }else if(weather === "overcast" && (waves <=6 ) && (waves >= 3)){
+        bobsMood = "totally Bummed";
+    }else if(weather === "overcast" && waves < 3){
+        bobsMood = "not Happy";
+    }else{
+        bobsMood = "sad";
+    }
+    console.log("Bob's mood is ", bobsMood);*/
 
 
 
@@ -447,10 +470,17 @@ console.log('------Functions ----------');
 
      - type the below as an example
         functionName();
- *****************************
+ ******************************/
 
-
-
+    var myctr = 1;
+    var myCounter = function(){
+        myctr++;
+        console.log('counter =', myctr);
+    };
+    myCounter();
+    myCounter();
+    
+    
 
  /*
     function literal: passing data into a function
@@ -488,6 +518,15 @@ console.log('------Functions ----------');
  */
 
 
+var value1 = 1;
+var value2 = 2;
+
+var myFn = function(var1, var2){
+    console.log('function number: ', var1 + var2);
+};
+
+myFn(value1, value2);
+
 
 
 /*******************************************
@@ -501,6 +540,13 @@ console.log('------Functions ----------');
      5.  second time: pass a 2 into the funciton as an argument
      6.  console.log the results
  ********************************************/
+    var myctr = 1;
+    var myCounter = function(newct){
+        myctr += newct;
+        console.log('counter =', myctr);
+    };
+    myCounter(5);
+    myCounter(2);
 
 
 
@@ -532,7 +578,14 @@ console.log('------Functions ----------');
             output the same info
     4.  console.log the results
  ********************************************/
-
+    var myctr = 1;
+    var myCounter = function(newct){
+        myctr += newct;
+        return myctr;
+    };
+    myCounter(5);
+    myCounter(2);
+    console.log('counter7 =', myctr);
 
 
 
@@ -545,4 +598,31 @@ console.log('------Functions ----------');
  4. return Mood
  5. console.log the Results
  ********************************************/
+    
+    var value1 = "overcast";
+    var value2 = 5;
+    
+    
+    var moodFn = function(weather, waves){
+        if (weather === "sunny" && waves === 10){
+            bobsMood = "pumped";
+        }else if(weather ==="sunny" && (waves <=9) && (waves >= 5)){
+            bobsMood = "mellow";
+        }else if(weather === "sunny" && waves < 5){
+            bobsMood = "bummed";
+        }else if(weather === "overcast" && (waves <= 10) && (waves >= 7)){
+            bobsMood = "jackedUp";
+        }else if(weather === "overcast" && (waves <=6 ) && (waves >= 3)){
+            bobsMood = "totally Bummed";
+        }else if(weather === "overcast" && waves < 3){
+            bobsMood = "not Happy";
+        }else{
+            bobsMood = "sad";
+        }
+        return bobsMood;
+    }
+    
+    var moodType = moodFn(value1, value2);
+    console.log("Bob's mood is ", moodType);
+    
 
