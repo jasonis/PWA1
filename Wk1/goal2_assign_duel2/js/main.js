@@ -34,8 +34,8 @@ function fight(){
         //random number generator and damage calculator
         var minDamage1 = p1[2] * .5;
         var minDamage2 = p2[2] * .5;
-        var f1 = Math.floor(Math.random()*(p1Damage-minDamage1)+minDamage1);
-        var f2 = Math.floor(Math.random()*(p2Damage-minDamage2)+minDamage2);  
+        var f1 = Math.floor(Math.random()*(p1[2]-minDamage1)+minDamage1);
+        var f2 = Math.floor(Math.random()*(p2[2]-minDamage2)+minDamage2);  
     
         //console.log(f1);
         //console.log(f2);
