@@ -24,7 +24,7 @@ var round = 0;
 function fight(){
     console.log('in the fight function');//this verifies that you are inside of the function
   
-    alert(p1Name+":"+p1Health+" *START* "+p2Name+":"+p2Health);
+    alert(p1[0]+":"+p1[1]+" *START* "+p2[0]+":"+p2[1]);
   
     for (var i=0; i < 10; i++){
         //console.log(i);
@@ -32,25 +32,25 @@ function fight(){
         //random formula -- Math.floor(Math.random() * (max - min) + min);
         
         //random number generator and damage calculator
-        var minDamage1 = p1Damage * .5;
-        var minDamage2 = p2Damage * .5;
+        var minDamage1 = p1[2] * .5;
+        var minDamage2 = p2[2] * .5;
         var f1 = Math.floor(Math.random()*(p1Damage-minDamage1)+minDamage1);
         var f2 = Math.floor(Math.random()*(p2Damage-minDamage2)+minDamage2);  
     
         //console.log(f1);
         //console.log(f2);
     
-        p1Health-=f1;
-        p2Health-=f2;
+        p1[1]-=f1;
+        p2[1]-=f2;
         
-        console.log(p1Name+":"+p1Health+" *START* "+p2Name+":"+p2Health);
+        console.log(p1[0]+":"+p1[1]+" *START* "+p2[0]+":"+p2[1]);
         
         var results = winnerCheck();
         console.log(results);
          
         if (results === "no winner"){
             round++;
-            alert(p1Name+":"+p1Health+" *ROUND* "+round+" OVER "+p2Name+":"+p2Health);
+            alert(p1[0]+":"+p1[1]+" *ROUND* "+round+" OVER "+p2[0]+":"+p2[1]);
         }else{
             alert(results);
             break;//this gets us out of the function when we get to 10 rounds
@@ -64,12 +64,12 @@ function winnerCheck(){
     console.log("in winnerCheck FN");
     var result="no winner";
     
-    if (p1Health<1 && p2Health<1){
+    if (p1[1]<1 && p2[1]<1){
         result = "You Both Die";
-    }else if(p1Health<1){
-        result = p2Name+" WINS!!!"
-    }else if(p2Health<1){
-        result = p1Name+" WINS!!!"
+    }else if(p1[1]<1){
+        result = p2[0]+" WINS!!!"
+    }else if(p2[1]<1){
+        result = p1[0]+" WINS!!!"
     };
     
     return result;
