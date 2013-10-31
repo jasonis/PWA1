@@ -7,6 +7,7 @@
 
 console.log("fight");//test to make sure js is linked to html
 
+//these vars contain an array which hold the players names, health and damage
 var p1 = ["Yoda", 100, 20];
 var p2 = ["Darth Vader", 100, 20];
 
