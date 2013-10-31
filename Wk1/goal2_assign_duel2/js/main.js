@@ -7,14 +7,17 @@
 
 console.log("fight");//test to make sure js is linked to html
 
-var p1Name = "Yoda";
+var p1 = ["Yoda", 100, 20];
+var p2 = ["Darth Vader", 100, 20];
+
+/*var p1Name = "Yoda";
 var p2Name = "Darth Vader";
 
 var p1Health = 100;
 var p2Health = 100;
 
 var p1Damage = 20;
-var p2Damage = 20;
+var p2Damage = 20;*/
 
 var round = 0;
 
