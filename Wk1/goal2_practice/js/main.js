@@ -327,7 +327,19 @@ arr1.forEach(function(element, index, array){
     var secondQtr = ["Apr", "May", "Jun"];
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var combined;
-
+    var element;
+combined = firstQtr.concat(secondQtr);
+console.log(combined);
+combined = combined.concat(secondHalfYr);
+console.log(combined);
+console.log(combined.join());
+var element = combined.pop();
+console.log(element);
+console.log(combined);
+var results = secondHalfYr.slice(2, 4);
+console.log(secondHalfYr);
+console.log(secondHalfYr.slice(2, 4));
+console.log(secondHalfYr);
 
 /*
 	===============================================
@@ -338,7 +350,10 @@ arr1.forEach(function(element, index, array){
 */
 
 console.log('------ MORE Operators - typeof() ----------');
-
+console.log(typeof 5);
+console.log(typeof "hi");
+var str1 = "hello";
+console.log(typeof str1);
 
 /*
 	===============================================
@@ -364,6 +379,8 @@ console.log('------ MORE Operators - typeof() ----------');
 
 console.log('------ MORE Conditionals - Switch ----------');
 
+
+
 /*******************************************
  STUDENT ACTIVITY 6:
 
@@ -373,7 +390,18 @@ console.log('------ MORE Conditionals - Switch ----------');
 			if age 18 then console.log "adult"
 			if no age then console.log "No answer"
 ********************************************/
-
+var age = "13";
+switch(age){
+    case "13":
+        console.log("child");
+        break;
+    case "18":
+        console.log("adult");
+        break;
+    default:
+        console.log("no answer");
+        break;
+}
 
 
 /*
@@ -388,8 +416,11 @@ console.log('------ MORE Conditionals - Switch ----------');
 */
 
 console.log('------ MORE Functions ----------');
-
-
+var bondsCars = function(){
+    return ["ferrari", "lambo", "vwBug"];
+}
+var cars = bondsCars();
+console.log("James Bond drives a " + cars);
 	/* 
 		Self Executing Functions
 	
@@ -437,6 +468,15 @@ console.log('------ MORE Functions ----------');
 			}			
 */
 console.log('------ While / Loop ----------');
+var numOfBeers = 10;
+while(numOfBeers > 0){
+    console.log(numOfBeers + " on the wall");
+    numOfBeers--;
+}
+
+for(var beers = 10; beers > 0; beers--){
+    console.log(beers + "beers on the wall");
+}
 
 	
 /*
@@ -475,7 +515,8 @@ console.log('------For Loop ----------');
 		- in the example below, the last index of the array would be 4 
 			- the  .length property returns the count, which would be 5	
 	*/	
-
+var myNums = [1, 2, 3, 4, 5];
+console.log(myNums.length);
 
 	/* 
 		using the for() loop with .length
@@ -495,7 +536,13 @@ console.log('------For Loop ----------');
 		- depending on the size of an array, it can be more efficient to 
 			save the array length in a variable, inside the first statement
 	*/
-
+for(var i = 0, j = myNums.length; i<j; i++){
+    if(i === 3){
+        console.log("testing out the break");
+        continue;
+    }
+    console.log("length in the for loop " + myNums[i]);
+}
 
 	/*
 		BREAK...
@@ -527,6 +574,15 @@ console.log('------For Loop ----------');
 		b.  create a for loop using the faster method (4 parameters)
 			- in the loop just console.log the values
 ********************************************/
+var heroes = ["Superman", "Batman", "Wolverine", "Iceman"];
+for(var i = 0; i < heroes.length; i++){
+    console.log(heroes[i]);
+}
+
+for(var i = 0, j = heroes.length; i<j; i++){
+    console.log("hero: " + heroes[i]);
+}
+
 
 
 
