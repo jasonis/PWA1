@@ -87,21 +87,25 @@
     }
     console.log("There are " + count + " characters in this string");
 
-    console.log(count(ipsum));
+    //console.log(count(ipsum));
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
 
         //PUT FUNCTION HERE
 
-    console.log(vowelsInWord('JavaScript'));
+    //console.log(vowelsInWord('JavaScript'));
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
 
-        //PUT FUNCTION HERE
+    var findNum = [31,22,4,67,83,6,5,4];
+    for (var i = 0; i < findNum.length; i++) {
+        findNum[i] /= 2;
+    }
+    console.log(findNum);
 
-    console.log(findNum([31,22,4,67,83,6,5,4]));
-    console.log(findNum([31,22,4,67,83,6,5,4], false));
+    //console.log(findNum([31,22,4,67,83,6,5,4]));
+    //console.log(findNum([31,22,4,67,83,6,5,4], false));
 
 })();
