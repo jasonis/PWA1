@@ -201,16 +201,19 @@ console.log(str1.toUpperCase());
 console.log('------ MORE Numbers ----------');
 
 // Use toExponential() console.log num in exponential notation with two decimals.
-
+var num = 456789;
+var dec = 33.123456;
+console.log(num.toExponential(2));
 
 // Use toPrecision() console.log dec as four numbers.
-
+console.log(dec.toPrecision(4));
 
 //STUDENT ACTIVITY 4:
 //What method would you use to console.log the variable dec with two decimals.
-
+console.log(dec.toPrecision(4));
 
 // Use toString() to console.log the type of num.
+console.log(typeof num.toString());
 
 
 
@@ -234,7 +237,14 @@ console.log('------ MORE Numbers ----------');
 */
 
 console.log('------ MORE Booleans ----------');
+var num = 9 * "k";
+console.log(num);
 
+if(num){
+    console.log("It's true, the value is: ", num);
+}else{
+    console.log("It's false, the value is: ", num);
+}
 
 	
 /*
