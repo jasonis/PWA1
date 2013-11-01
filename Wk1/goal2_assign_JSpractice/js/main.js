@@ -45,19 +45,28 @@
     console.log('------ Goal2: Assignment: JavaScript Practice ----------');
 
     console.log("1. avg of an array of numbers");
-    var avgNumbers = function(arr){
-
-        //CODE GOES HERE
-    };
-
-    console.log('avg number = ', avgNumbers([1,2,3,4,5]));
+    var num = [6, 7, 8];
+    var avg = avgNumbers(num[0], num[1], num[2]);
+    
+    function avgNumbers(avg){
+        var avg = (num[0] + num[1] + num[2]) / 3;
+        return avg;
+    }
+    console.log("The average of these numbers is " + avg);
 
     //--------------------------------------------------------
     console.log("2. concat first and last name");
 
-        //PUT FUNCTION HERE
+    var firstName = "James ";
+    var lastName = "Bond";
+    var name = fullName(firstName, lastName);
+    
+    function fullName(firstName, lastName){
+        var name = firstName.concat(lastName);
+        return name;
+    }
+    console.log("My name is " + lastName + ", " + name);
 
-    console.log(fullName('James', 'Bond'));
 
     //--------------------------------------------------------
     console.log("3. word count");
@@ -65,14 +74,20 @@
 
         //PUT FUNCTION HERE
 
-    console.log(wordCount(ipsum));
+    //console.log(wordCount(ipsum));
 
     //--------------------------------------------------------
     console.log("4. sentence char count");
 
-        //PUT FUNCTION HERE
+    var count = charCount(ipsum);
 
-    console.log(charCount(ipsum));
+    function charCount(ipsum){
+        var count = ipsum.length;
+        return count;
+    }
+    console.log("There are " + count + " characters in this string");
+
+    console.log(count(ipsum));
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
