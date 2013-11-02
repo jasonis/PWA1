@@ -96,14 +96,17 @@
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
-
-    var findNum = [31,22,4,67,83,6,5,4];
-    for (var i = 0; i < findNum.length; i++) {
-        findNum[i] /= 2;
+    
+    var numbers = [31,22,4,67,83,6,5,4];
+    var findNum = function(){
+        for (var i = 0; i < numbers.length; i++) {
+            numbers[i] /= 2;
+        }
+        return
     }
     console.log(findNum);
 
-    //console.log(findNum([31,22,4,67,83,6,5,4]));
-    //console.log(findNum([31,22,4,67,83,6,5,4], false));
+    console.log(findNum([31,22,4,67,83,6,5,4]));
+    console.log(findNum([31,22,4,67,83,6,5,4], false));
 
 })();
