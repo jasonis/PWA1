@@ -59,13 +59,12 @@
 
     var firstName = "James ";
     var lastName = "Bond";
-    var name = fullName(firstName, lastName);
     
-    function fullName(firstName, lastName){
-        var name = firstName.concat(lastName);
+    var fullName = function(firstName, lastName){
+        var name = firstName.concat(" ".concat(lastName));
         return name;
     }
-    console.log("My name is " + lastName + ", " + name);
+    console.log(fullName('James', 'Bond'));
 
 
     //--------------------------------------------------------
