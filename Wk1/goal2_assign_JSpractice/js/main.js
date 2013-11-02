@@ -45,14 +45,15 @@
     console.log('------ Goal2: Assignment: JavaScript Practice ----------');
 
     console.log("1. avg of an array of numbers");
-    var num = [6, 7, 8];
-    var avg = avgNumbers(num[0], num[1], num[2]);
+    var num = [1,2,3,4,5];
+    //var avg = avgNumbers(num[0], num[1], num[2]);
     
-    function avgNumbers(avg){
-        var avg = (num[0] + num[1] + num[2]) / 3;
-        return avg;
+    var avgNumbers = function(num){
+        var avgCalc = (num[0] + num[1] + num[2]) / num.length;
+        return avgCalc;
     }
-    console.log("The average of these numbers is " + avg);
+    console.log('avg number = ', avgNumbers([1,2,3,4,5]));
+    //console.log("The average of these numbers is " + avg);
 
     //--------------------------------------------------------
     console.log("2. concat first and last name");
