@@ -72,9 +72,12 @@
     console.log("3. word count");
     var ipsum = "this is test text that is being used as input to a function"
 
-        //PUT FUNCTION HERE
+    var wordCount = function(words){
+        var wordCalc = words.split(" ");
+        return wordCalc.length;
+    }
 
-    //console.log(wordCount(ipsum));
+    console.log(wordCount(ipsum));
 
     //--------------------------------------------------------
     console.log("4. sentence char count");
