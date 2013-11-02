@@ -82,15 +82,12 @@
     //--------------------------------------------------------
     console.log("4. sentence char count");
 
-    var count = charCount(ipsum);
-
-    function charCount(ipsum){
-        var count = ipsum.length;
-        return count;
+    var charCount = function(sentence){
+        var charCalc = sentence.split(" ");
+        return charCalc;
     }
-    console.log("There are " + count + " characters in this string");
 
-    //console.log(count(ipsum));
+    console.log(charCount(ipsum));
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
