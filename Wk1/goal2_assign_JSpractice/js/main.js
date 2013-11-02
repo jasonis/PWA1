@@ -84,7 +84,7 @@
 
     var charCount = function(sentence){
         var charCalc = sentence.split(" ");
-        return charCalc;
+        return sentence.length;
     }
 
     console.log(charCount(ipsum));
