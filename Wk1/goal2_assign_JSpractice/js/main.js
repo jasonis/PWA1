@@ -99,8 +99,10 @@
     
     var numbers = [31,22,4,67,83,6,5,4];
     var findNum = function(){
-        for (var i = 0; i < numbers.length; i++) {
+        if(var i = 0; i < numbers.length; i++) {
             numbers[i] /= 2;
+        }else{
+            
         }
         return
     }
