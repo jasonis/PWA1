@@ -21,7 +21,15 @@ var fighter = [
     }
 ];
 
+var fighting = true;
 var round = 0;
+
+var dom = {
+        yoda: document.querySelector('#kabal'),
+        vader: document.querySelector('#kratos'),
+        round: document.querySelector('#round_number'),
+        button: document.querySelector('#fight_btn')
+}
 
 function fight(){
     console.log('in the fight function');//this verifies that you are inside of the function
