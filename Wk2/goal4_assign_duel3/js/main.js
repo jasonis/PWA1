@@ -82,12 +82,15 @@ function winnerCheck(){
     console.log("in winnerCheck FN");
     var result="no winner";
     
-    if (p1[1]<1 && p2[1]<1){
+    if (fighter[0].health<1 && fighter[1].health<1){
         result = "You Both Die";
-    }else if(p1[1]<1){
-        result = p2[0]+" WINS!!!"
-    }else if(p2[1]<1){
-        result = p1[0]+" WINS!!!"
+        document.getElementById('scores').innerHTML = "You Both Die!";
+    }else if(fighter[0].health<1){
+        result = fighter[1].name+" WINS!!!";
+        document.getElementById('scores').innerHTML = fighter[1].name + "WINS!";
+    }else if(fighter[1].health<1){
+        result = fighter[0].name+" WINS!!!";
+        document.getElementById('scores').innerHTML = fighter[0].name + "WINS!";
     };
     
     return result;
