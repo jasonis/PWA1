@@ -59,13 +59,20 @@ dom.button.onclick = function fight(){
         var results = winnerCheck();
         console.log(results);
          
-        if (results === "no winner"){
+        if (result === "no winner"){
             round++;
-            alert(p1[0]+":"+p1[1]+" *ROUND* "+round+" OVER "+p2[0]+":"+p2[1]);
+            dom.yoda.innerHTML = fighter[0].health + " " + fighter[0].name;
+            dom.vader.innerHTML = fighter[1].health + " " + fighter[1].name;
+            dom.round.innerHTML = "Round " + round + " " + result;
+            
         }else{
-            alert(results);
-            break;//this gets us out of the function when we get to 10 rounds
+            dom.round.innerHTML = "Round " + round +  " - " + result;
+            dom.button.onclick = "event.stopPropagation = true";
+            fight.onclick = null;
+            fighting = false;
+           
         }
+        dom.round.innerHTML = "Round " + round + ": " + result;
   
   };  
   
