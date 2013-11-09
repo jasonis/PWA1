@@ -21,5 +21,10 @@ var dom = {
 var made = 0;
 var remain = 3;
 
+dom.button.onclick = function guessGame(){
+    
+
+};
+
 
 })();
