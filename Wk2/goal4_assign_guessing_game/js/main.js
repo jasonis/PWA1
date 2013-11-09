@@ -24,6 +24,11 @@ var remain = 3;
 dom.button.onclick = function guessGame(){
     if(made<3){
         
+        var input = document.querySelector("#input").value;
+        
+        made++;
+        remain--;
+        
     
     }else{
     dom.output.innerHTML = "You Are Out of Guesses.  Please Reset Your Browser and Try Again";
