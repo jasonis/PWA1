@@ -1,6 +1,6 @@
 /*          Jason Slocum
             10.29.13
-            The Duel Part 2
+            The Duel Part 3
 */
 
 (function(){
@@ -86,10 +86,10 @@ function winnerCheck(){
         document.getElementById('scores').innerHTML = "You Both Die!";
     }else if(fighter[0].health<1){
         result = fighter[1].name+" WINS!!!";
-        document.getElementById('scores').innerHTML = fighter[1].name + "WINS!";
+        document.getElementById('scores').innerHTML = fighter[1].name + " WINS!";
     }else if(fighter[1].health<1){
         result = fighter[0].name+" WINS!!!";
-        document.getElementById('scores').innerHTML = fighter[0].name + "WINS!";
+        document.getElementById('scores').innerHTML = fighter[0].name + " WINS!";
     };
     
     return result;
