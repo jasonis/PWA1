@@ -29,7 +29,31 @@ dom.button.onclick = function guessGame(){
         made++;
         remain--;
         
-    
+        if(input === " "){
+            dom.output.innerHTML = "Please Enter Your Guess.  Guess: " + made + " Remaining: " + remain;
+            return false;
+        }else if (input > 10){
+            dom.output.innerHTML = input + " is too high.  Guess: " + made + " Remaining: " + remain;
+            return false;
+        }else if (input < 1){
+            dom.output.innerHTML = input + " is too low.  Guess: " + made + " Remaining: " + remain;
+            return false;
+        }else{
+            if(input < rndNum){
+                dom.output.innerHTML = input + " is too low.  Guess: " + made + " Remaining: " + remain;
+                return false;
+            }else if(input > rndNum){
+                dom.output.innerHTML = input + " is too high.  Guess: " + made + " Remaining: " + remain;
+                return false;
+            }else{
+                dom.output.innerHTML = "You Won! " + input + " is correct!";
+                dom.button.onclick = "event.stopPropagation = true";
+                dom.button.innerHTML = "Done";
+                return false;
+            }
+            return false;
+        }
+        
     }else{
     dom.output.innerHTML = "You Are Out of Guesses.  Please Reset Your Browser and Try Again";
     dom.button.onclick = "event.stopPropagation = true";
