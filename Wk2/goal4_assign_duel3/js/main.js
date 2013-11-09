@@ -51,10 +51,10 @@ dom.button.onclick = function fight(){
         //console.log(f1);
         //console.log(f2);
     
-        p1[1]-=f1;
-        p2[1]-=f2;
+        fighter[0].health-=f1;
+        fighter[1].health-=f2;
         
-        console.log(p1[0]+":"+p1[1]+" *START* "+p2[0]+":"+p2[1]);
+        console.log(fighter[0].name+":"+fighter[0].health+" *START* "+fighter[1].name+":"+fighter[1].health);
         
         var results = winnerCheck();
         console.log(results);
