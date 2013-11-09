@@ -9,18 +9,22 @@
 
 //Game variables
 (function (){
-    
+
+//generates a random number    
 var rndNum = Math.floor(Math.random()*10);
 
+//creates an object for easy dom access
 var dom = {
     input: document.querySelector("#input").value,
     output: document.getElementById("output"),
     button: document.querySelector("button")
 }
 
+//counters for guesses made and guesses remaining
 var made = 0;
 var remain = 3;
 
+//main game function and initiates a click event
 dom.button.onclick = function guessGame(){
     if(made<3){
         
