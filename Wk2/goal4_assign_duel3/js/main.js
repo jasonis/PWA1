@@ -31,21 +31,22 @@ var dom = {
         button: document.querySelector('#fight_btn')
 }
 
-function fight(){
+dom.button.onclick = function fight(){
     console.log('in the fight function');//this verifies that you are inside of the function
   
-    alert(p1[0]+":"+p1[1]+" *START* "+p2[0]+":"+p2[1]);
+    //alert(p1[0]+":"+p1[1]+" *START* "+p2[0]+":"+p2[1]);
   
-    for (var i=0; i < 10; i++){
-        //console.log(i);
+    if(fighting === true){
+        dom.yoda.innerHTML = fighter[0].name + ": " + fighter[0].health;
+        dom.vader.innerHTML = fighter[1].name + ": " + fighter[1].health;
         
         //random formula -- Math.floor(Math.random() * (max - min) + min);
         
         //random number generator and damage calculator
-        var minDamage1 = p1[2] * .5;
-        var minDamage2 = p2[2] * .5;
-        var f1 = Math.floor(Math.random()*(p1[2]-minDamage1)+minDamage1);
-        var f2 = Math.floor(Math.random()*(p2[2]-minDamage2)+minDamage2);  
+        var minDamage1 = fighter[0].damage * .5;
+        var minDamage2 = fighter[1].damage * .5;
+        var f1 = Math.floor(Math.random()*(fighter[0].damage-minDamage1)+minDamage1);
+        var f2 = Math.floor(Math.random()*(fighter[1].damage-minDamage2)+minDamage2); 
     
         //console.log(f1);
         //console.log(f2);
