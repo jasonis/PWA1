@@ -22,7 +22,14 @@ var made = 0;
 var remain = 3;
 
 dom.button.onclick = function guessGame(){
+    if(made<3){
+        
     
+    }else{
+    dom.output.innerHTML = "You Are Out of Guesses.  Please Reset Your Browser and Try Again";
+    dom.button.onclick = "event.stopPropagation = true";
+    return false;
+    };
 
 };
 
