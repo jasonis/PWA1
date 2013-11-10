@@ -34,16 +34,24 @@
 
     var validateField = function(inputName){
 
-        if (inputName.name === 'id name goes here'){
-            var pattern = 'a RegEx pattern goes here'
-
+        if (inputName.username === '#f_username'){
+            var pattern = 'a RegEx pattern goes here'; 
+        }else if(inputName.email === '#f_email'){
+            var pattern = '';
+        }else if(inputName.phone === '#f_phone'){
+            var pattern = '';
+        }else if(inputName.password === '#f_password'){
+            var pattern = '';
+        }else if(inputName.ssn ==='#f_ssn'){
+            var pattern = '';
+        };
             //You will need to create an else-if statement for each input field id.  The
             //      format will be similar to the above IF statement.
 
 
-        };
+        
 
-        var pass = 'the RegEx .test statement is needed here';
+        var pass = pattern.test(inputName.value);
         var errorMsg = inputName.nextSibling.nextSibling.nextSibling.nextSibling;
 
         if (!pass || inputName.value.length < 2){
