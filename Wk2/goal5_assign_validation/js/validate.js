@@ -1,6 +1,8 @@
 /*
      Developed by the JavaScript team at Fullsail
-     Date: 1306
+     Date: 11.9.13
+     Jason Slocum
+     
 */
 
 (function(){
