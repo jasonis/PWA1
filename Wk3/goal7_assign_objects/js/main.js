@@ -13,6 +13,9 @@
         
         var person = new Person(names[Math.floor(Math.random() * names.length)], i + 1);
         
+        populateHTML(person.name, "r"+(i+1)+"c1");
+        populateHTML(person.job, "r"+(i+1)+"c2");
+        
         
     };
     
@@ -30,20 +33,7 @@
             });
     };
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    interval = setInterval(runUpdate, 1000 / 30);
     
     
     

@@ -8,9 +8,9 @@
     var Person = function(name, row){
             
             this.name = name;
-            this.row = row;
-            this.job = Person.jobs[Math.floor(Math.random() * Person.jobs.length)];
             this.action = Person.action[Math.floor(Math.random() * Person.action.length)];
+            this.job = Person.jobs[Math.floor(Math.random() * Person.jobs.length)];
+            this.row = row;
             
             var display = document.getElementById("r"+this.row+"c3").innerHTML = this.action;
         
