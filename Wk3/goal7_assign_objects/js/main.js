@@ -16,6 +16,8 @@
         populateHTML(person.name, "r"+(i+1)+"c1");
         populateHTML(person.job, "r"+(i+1)+"c2");
         
+        people.push(person);
+        
         
     };
     
@@ -35,7 +37,7 @@
     
     interval = setInterval(runUpdate, 1000 / 30);
     
-    
+    clearInterval(interval);
     
 })();
 
