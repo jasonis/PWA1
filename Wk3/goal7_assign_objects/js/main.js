@@ -11,7 +11,7 @@
     
     for(var i = 0; i < 3; i++){
         
-        var person = new person(names[Math.floor(Math.random() * names.length)], i + 1);
+        var person = new Person(names[Math.floor(Math.random() * names.length)], i + 1);
         
         
     };
