@@ -14,17 +14,21 @@
         var person = new person(names[Math.floor(Math.random() * names.length)], i + 1);
         
         
-    }
+    };
     
     
     
-    function populateHTML(){
+    function populateHTML(pname, pjob){
     
-    
-    
+            var display = document.getElementById(pjob).innerHTML = pname;
     
     };
     
+    function runUpdate(){
+            people.forEach(function(element){
+                    element.update();
+            });
+    };
     
     
     
