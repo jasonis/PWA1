@@ -33,7 +33,7 @@
                     element.update();
             });
     };
-    
+    console.log(person);
     interval = setInterval(runUpdate, 1000 / 30);
     
     clearInterval(interval);
