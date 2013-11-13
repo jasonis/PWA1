@@ -2,6 +2,8 @@
  * Created by the JavaScript Development Team
  * Class: PWA
  * Goal: Goal7
+ * Jason Slocum
+ * 11.12.13
  */
 (function(){
     
@@ -17,11 +19,8 @@
         populateHTML(person.job, "r"+(i+1)+"c2");
         
         people.push(person);
-        
-        
+            
     };
-    
-    
     
     function populateHTML(pname, pjob){
     
