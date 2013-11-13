@@ -5,6 +5,13 @@
  */
 (function(){
     
+    var Person = function(name, row){
+              
+        
+        
+        
+    };
+    
     
     
     
