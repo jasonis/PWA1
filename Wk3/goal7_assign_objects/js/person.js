@@ -25,9 +25,9 @@
     
     Person.prototype.update = function(){
         
-             if(Math.floor(Math.random() < .05)){
+             if(Math.floor(Math.random() < .01)){
                 
-                    this.action = Person.actions[Math.floor(Math.random() * Person.actions.length)];
+                    this.action = Person.action[Math.floor(Math.random() * Person.action.length)];
                     
                     var display = document.getElementById("r"+this.row+"c3");
                     display.innerHTML = this.action;

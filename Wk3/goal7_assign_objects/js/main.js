@@ -19,13 +19,14 @@
         populateHTML(person.name, "r"+(i+1)+"c1");
         populateHTML(person.job, "r"+(i+1)+"c2");
         
-        
+        names.splice(person,1);
             
     };
     
     function populateHTML(pname, pjob){
     
-            var display = document.getElementById(pjob).innerHTML = pname;
+            var display = document.getElementById(pjob);
+            display.innerHTML = pname;
     
     };
     
@@ -35,9 +36,10 @@
             });
     };
     console.log(person);
-    interval = setInterval(runUpdate, 1000 / 30);
     
     clearInterval(interval);
+    interval = setInterval(runUpdate, 1000 / 30);
+    
     
 })();
 
