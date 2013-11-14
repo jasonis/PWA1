@@ -13,13 +13,14 @@
     
     for(var i = 0; i < 3; i++){
         
-        var person = new Person(names[Math.floor(Math.random() * names.length)], i + 1);
+        var peopleArray = Math.floor(Math.random() * names.length);
+        var person = new Person(names[peopleArray], i + 1);
         people.push(person);
         
         populateHTML(person.name, "r"+(i+1)+"c1");
         populateHTML(person.job, "r"+(i+1)+"c2");
         
-        names.splice(person,1);
+        names.splice(peopleArray,1);
             
     };
     
