@@ -20,8 +20,8 @@
     
     window.Person = Person;
     
-    Person.jobs = ["Singer", "Roofer", "Plumber", "Biophysicist"];
-    Person.action = ["Eating", "Sleeping", "Working"];
+    Person.jobs = ["Singer", "Roofer", "Plumber", "Biophysicist", "Farmer", "Pilot"];
+    Person.action = ["Eating", "Sleeping", "Working", "Digesting", "Crocheting", "Sneezing"];
     
     Person.prototype.update = function(){
         
