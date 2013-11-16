@@ -54,9 +54,7 @@ console.log("start canvas");
             
             for(var i = 0, max = xAxisData.length; i < max; i++){
                     ctx.fillText(xAxisData[i],i*80+95, 290);
-            };
-    
+            };    
     };
-    
-    
+        
 })();
