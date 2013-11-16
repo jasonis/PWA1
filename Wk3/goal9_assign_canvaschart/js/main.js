@@ -37,9 +37,10 @@ console.log("start canvas");
                     ctx.rect(i*80+90, 270-height, 50, height);
                     ctx.fill();
                     ctx.fillStyle = 'rgb(255, 255, 255)';
-                    ctx.fillText(chartData[i], i*85+95, 265-height, 50, height );           
+                    ctx.fillText(chartData[i], i*85+95, 265-height, 50, height );
+                    drawChartText();
             };
-        drawChartText();
+        
     };
     
     function drawChartText(){
