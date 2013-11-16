@@ -22,6 +22,10 @@ console.log("start canvas");
     
     img.src = "images/bg.jpg";
     
+    img.addEventListener('load', function(){
+                ctx.drawImage(img,0,0,400,300)
+                drawBars();
+        }, false);
     
 
 })();
