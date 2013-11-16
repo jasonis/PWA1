@@ -23,38 +23,38 @@ console.log("start canvas");
     img.src = "images/bg.jpg";
     
     img.addEventListener('load', function(){
-                ctx.drawImage(img,0,0,400,300)
-                drawBars();
-        }, false);
+        ctx.drawImage(img,0,0,400,300)
+        drawBars();
+    }, false);
     
     function drawBars(){
-            ctx.font = '14px Georgia';
+        ctx.font = '14px Georgia';
             
-            for(var i = 0, max = chartData.length; i < max; i++){
-                    ctx.beginPath();
-                    ctx.fillStyle = 'rgba(100, 200, 200, 0.75)';
-                    var height = maxBarHeight*chartData[i]/100;
-                    ctx.rect(i*80+90, 270-height, 50, height);
-                    ctx.fill();
-                    ctx.fillStyle = 'rgb(255, 255, 255)';
-                    ctx.fillText(chartData[i], i*85+95, 265-height, 50, height );
-            };
+        for(var i = 0, max = chartData.length; i < max; i++){
+            ctx.beginPath();
+            ctx.fillStyle = 'rgba(100, 200, 200, 0.75)';
+            var height = maxBarHeight*chartData[i]/100;
+            ctx.rect(i*80+90, 270-height, 50, height);
+            ctx.fill();
+            ctx.fillStyle = 'rgb(255, 255, 255)';
+            ctx.fillText(chartData[i], i*85+95, 265-height, 50, height );
+        };
         drawChartText();
     };
     
     function drawChartText(){
-            ctx.font = '20px Georgia';
-            ctx.fillStyle = 'rgb(255, 255, 255)';
-            ctx.fillText('TEST GRADES', 30, 30);
+        ctx.font = '20px Georgia';
+        ctx.fillStyle = 'rgb(255, 255, 255)';
+        ctx.fillText('TEST GRADES', 30, 30);
             
-            var xAxisData = ['Quiz 1', 'Quiz 2', 'Quiz 3', 'Quiz 4'];
+        var xAxisData = ['Quiz 1', 'Quiz 2', 'Quiz 3', 'Quiz 4'];
             
-            ctx.font = '14px Georgia';
-            ctx.fillStyle = 'rgb(0, 0, 0)';
+        ctx.font = '14px Georgia';
+        ctx.fillStyle = 'rgb(0, 0, 0)';
             
-            for(var i = 0, max = xAxisData.length; i < max; i++){
-                    ctx.fillText(xAxisData[i],i*80+95, 290);
-            };    
+        for(var i = 0, max = xAxisData.length; i < max; i++){
+            ctx.fillText(xAxisData[i],i*80+95, 290);
+        };    
     };
         
 })();
