@@ -6,13 +6,16 @@
 */
 
 (function(){
-    
+        //stores the anchor links
         var anchors = document.querySelectorAll('#container a');
-    
+        
+        //stores the results form the call to the library
         var results = Library(anchors);
     
+        //prints the results to the console
         console.log(results);
     
+        //call the library and passes the variable that stores the anchor links
         Library(anchors).each(function(){
             
                 this.style.backgroundColor = "gray";           
