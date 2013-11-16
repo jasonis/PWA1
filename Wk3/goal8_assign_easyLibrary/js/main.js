@@ -23,7 +23,6 @@
                 
                 //adds an onclick event- whenever one of the links is clicked, it is printed to the console
                 this.onclick = function(e){
-                        
                         e.preventDefault();
                         console.log('This is ' + this);
                 };        
