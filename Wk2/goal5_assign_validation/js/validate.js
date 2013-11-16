@@ -35,9 +35,9 @@
     var validateField = function(inputName){
 
         if (inputName.username === '#f_username'){
-            var pattern = 'a RegEx pattern goes here'; 
+            var pattern = /^[A-Z]+(([\'\,\.\- ][A-Z])?[a-zA-Z]*)*$/; 
         }else if(inputName.email === '#f_email'){
-            var pattern = '';
+            var pattern = /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/;
         }else if(inputName.phone === '#f_phone'){
             var pattern = '';
         }else if(inputName.password === '#f_password'){
