@@ -11,13 +11,15 @@
     
         var results = Library(anchors);
     
-        console.log('These are the results from the Library: ' + results);
+        console.log(results);
     
         Library(anchors).each(function(){
             
+                this.style.backgroundColor = "gray";           
                 this.onclick = function(e){
                     
                         e.preventDefault();
+                        console.log('This is ' + this);
                 };        
         });
 

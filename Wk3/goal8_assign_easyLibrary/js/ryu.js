@@ -1,19 +1,31 @@
 /*
 	PWA1: Goal8:  Simple Library
+	
+	Jason Slocum
+	11.15.13
 */
 
-var YOURLIBNAME = function(){
+var Library = function(details){
 
-    return new YOURLIBNAME.prototype.init();
+    return new Library.prototype.init(details);
 
 };
 
-YOURLIBNAME.prototype = {
+Library.prototype = {
 
-    init: function(){},
+    init: function(details){
+                this.elements = details;
+        },
 
-    elements: []
+    elements: [],
+    
+    each: function(get){
+            for(var i = 0, max = this.elements.length; i < max; i++){
+                get.call(this.elements[i]);
+                console.log(this.elements[i]);
+            }
+    }
 
 }; // end prototype
 
-YOURLIBNAME.prototype.init.prototype = YOURLIBNAME.prototype;
+Library.prototype.init.prototype = Library.prototype;
