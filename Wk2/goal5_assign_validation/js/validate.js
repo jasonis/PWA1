@@ -69,4 +69,31 @@
 })();  // end wrapper
 
 
+/*
+
+ 	
+//   ^[0]|[0-3]\.(\d?\d?)|[4].[0]$
+/*
+var validGpa = {
+    realGpa: document.querySelector('#gpa')
+    };
+    
+    form-box.onsubmit = function(e){
+
+        //Below is one example of the validateField call with an argument.
+        //You must dynamically retrieve the ID name from the DOM/HTML.
+
+        validateField(inputName.username);  //id = is the form input field ID
+        validateField(inputName.email);
+        validateField(inputName.phone);
+        validateField(inputName.password);
+        validateField(inputName.ssn);
+
+
+        e.preventDefault();
+        return false;
+    };
+*/
+
+
 
